@@ -203,7 +203,7 @@ This should write two files for a reference mitogenome (NC_061606.1) to your fol
 Now we have all we need to run MitoHiFi. Good! We are going to use the reference we just download for parameters `-f` and `-g` and we are going to use our PacBio 100 reads as input in `-r`. The `-r` are the reads we want to assemble in order to get our mitogenome done.
 
 ```
-singularity exec --cleanenv --bind /home/genomics/workshop_materials/genomeAssembly_files:/home/genomics/workshop_materials/genomeAssembly_files --bind ${PWD}:${PWD} /home/genomics/workshop_materials/genomeAssembly_files/mitohifi.sif mitohifi.py -r PacBioHiFi_100.fa.gz -f NC_073521.1.fasta -g NC_073521.1.gb -o 5 -t 4 
+singularity exec --cleanenv --bind /home/genomics/workshop_materials/genomeAssembly_files:/home/genomics/workshop_materials/genomeAssembly_files --bind ${PWD}:${PWD} /home/genomics/workshop_materials/genomeAssembly_files/mitohifi.sif mitohifi.py -r PacBioHiFi_100.fa.gz -f NC_061606.1.fasta -g NC_061606.1.gb -o 5 -t 4 
 ```
 
 Nice, ok. This will now run for a few minutes. What we are running above is the following: we are starting MitoHiFi from the unasembled reads of our species of insterest (`-r`), using the mitogenome of _Crambus perlellus_ as a close-related reference in `-f` and `-f`. MitoHiFi is going to annotate the mitogenome with MitoFinder, and for that it needs the genetic mitochondrial code for invertebrates which is given with `-o 5 `. Finally, we are using 4 CPUs (or threads) for this run `-t 4`.
