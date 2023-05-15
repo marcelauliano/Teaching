@@ -195,7 +195,7 @@ Ok, so one way that MitoHiFi works is from selecting mitochondrial reads from a 
 Remember we are assembling data for _Agriphila straminella_. So we want to find the closest reference available for it, including it's own mitogenome, if available.
 
 ```
-singularity exec --cleanenv --bind /home/genomics/workshop_materials/genomeAssembly_files:/home/genomics/workshop_materials/genomeAssembly_files --bind ${PWD}:${PWD} /home/genomics/workshop_materials/genomeAssembly_files/mitohifi.sif findMitoReference.py --species "Agriphila straminella" --outfolder . --min_length 16000
+singularity exec --cleanenv --bind /home/genomics/workshop_materials/genomeAssembly_files:/home/genomics/workshop_materials/genomeAssembly_files --bind ${PWD}:${PWD} /home/genomics/workshop_materials/genomeAssembly_files/mitohifi.sif findMitoReference.py --species "Agriphila straminella" --outfolder . --min_length 12000
 ```
 
 This should write two files for a reference mitogenome (NC_061606.1) to your folder: one ending in `.fasta` and another in `.gb`. 
