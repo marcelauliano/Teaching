@@ -14,3 +14,8 @@ Let me explain the command above: first we are displaying the content of the com
 ```
 #sample randomly from your pot of reads
 seqtk sample ilAgrStra1_PacBioHiFi_filtered.0.5.fasta.gz 200 > ilAgrStra1_PacBioHiFi_filtered.0.5.200.fa
+# run asmstats
+# run hifiasm
+# run asmstats
+# how does your graph looks this time?
+# what does blast say? what have you assembled this time?
