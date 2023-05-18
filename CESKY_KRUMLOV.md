@@ -38,7 +38,7 @@ pwd
 cp /home/genomics/workshop_materials/genomeAssembly_files/PacBioHiFi_100.fa.gz .
 
 # And now let's symlink this file from hifiasm to our MitoHiFi folder. 
-ln -s PacBioHiFi_100.fa.gz ../MitoHiFi/
+ln -s /home/genomics/workshop_materials/genomeAssembly_files/PacBioHiFi_100.fa.gz ../MitoHiFi/
 ```
 
 ## 2. Counting kmers 
