@@ -7,3 +7,10 @@ zcat ilAgrStra1_PacBioHiFi_filtered.0.5.fasta.gz | grep ">" | wc
 
 ```
 Let me explain the command above: first we are displaying the content of the compressed file with zcat (if the file wasn't zipped, we could go straight to grep), then we use a pipe `|` that basically sends the result of our first command to the next, so we are displaying the content of the zipped multifasta file, and then we are using `grep` to find a specific pattern inside our file, which is `>`. Finally we send the result of grep with a pipe `|` to another comand, the `wc`, which basically means _word count_. So we are counting how many times the symbol `>` happens in that file, wich is the same as calculating how many fasta sequences we have in our fasta file. :)  
+
+
+#### If you have finished hifiasm, try it again with a bit more reads.
+
+```
+#sample randomly from your pot of reads
+seqtk sample ilAgrStra1_PacBioHiFi_filtered.0.5.fasta.gz 200 > ilAgrStra1_PacBioHiFi_filtered.0.5.200.fa
